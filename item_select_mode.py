@@ -19,7 +19,10 @@ def finish():
 
 
 def handle_events():
-    pass
+    for event in get_events():
+        if event.type == SDL_QUIT:
+            game_framework.quit()
+            return
 
 
 def update():
