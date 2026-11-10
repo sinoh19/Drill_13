@@ -29,4 +29,5 @@ def update():
 def render():
     clear_canvas()
     game_world.render()
+    image.draw(get_canvas_width() / 2, get_canvas_height() / 2)
     update_canvas()
