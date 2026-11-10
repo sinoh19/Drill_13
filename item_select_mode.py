@@ -23,6 +23,8 @@ def handle_events():
         if event.type == SDL_QUIT:
             game_framework.quit()
             return
+        if event.type != SDL_KEYDOWN or getattr(event, 'repeat', 0):
+            continue
 
 
 def update():
