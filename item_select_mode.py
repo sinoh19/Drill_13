@@ -9,7 +9,7 @@ image = None
 
 
 def init():
-    pass
+    global image
 
 
 def finish():
