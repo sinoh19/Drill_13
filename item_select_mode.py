@@ -14,7 +14,8 @@ def init():
 
 
 def finish():
-    pass
+    global image
+    image = None
 
 
 def handle_events():
