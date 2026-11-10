@@ -5,6 +5,8 @@ import game_framework
 import game_world
 import play_mode
 
+image = None
+
 
 def init():
     pass
