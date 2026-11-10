@@ -1,7 +1,8 @@
-﻿from pico2d import *
+from pico2d import *
 import game_framework
 import game_world
 import pause_mode
+import item_select_mode
 import title_mode
 from boy import Boy
 from grass import Grass
