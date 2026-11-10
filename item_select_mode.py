@@ -28,4 +28,5 @@ def update():
 
 def render():
     clear_canvas()
+    game_world.render()
     update_canvas()
