@@ -7,6 +7,8 @@ class Ball:
     image = None
 
     def __init__(self, x, y, velocity, size=21):
+        if size not in (21, 41):
+            raise ValueError('Ball size must be 21 or 41')
         if Ball.image is None:
             Ball.image = load_image('ball21x21.png')
         self.size = size
