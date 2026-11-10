@@ -27,4 +27,5 @@ def update():
 
 
 def render():
-    pass
+    clear_canvas()
+    update_canvas()
