@@ -10,7 +10,7 @@ class Ball:
         if size not in (21, 41):
             raise ValueError('Ball size must be 21 or 41')
         if size not in Ball.images:
-            Ball.images[size] = load_image('ball21x21.png')
+            Ball.images[size] = load_image(f'ball{size}x{size}.png')
         self.image = Ball.images[size]
         self.size = size
         self.x, self.y = x, y
