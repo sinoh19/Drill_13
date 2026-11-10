@@ -10,6 +10,7 @@ image = None
 
 def init():
     global image
+    image = load_image(str(Path(__file__).with_name('item_select.png')))
 
 
 def finish():
