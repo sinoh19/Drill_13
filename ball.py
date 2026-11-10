@@ -9,6 +9,7 @@ class Ball:
     def __init__(self, x, y, velocity, size=21):
         if Ball.image is None:
             Ball.image = load_image('ball21x21.png')
+        self.size = size
         self.x, self.y = x, y
         self.velocity = velocity
 
