@@ -31,6 +31,9 @@ def handle_events():
             game_framework.pop_mode()
             return
 
+        if event.key == SDLK_ESCAPE:
+            game_framework.pop_mode()
+            return
 
 def update():
     pass
