@@ -28,6 +28,7 @@ def handle_events():
             continue
         if event.key in choices:
             play_mode.boy.ball_size = choices[event.key]
+            game_framework.pop_mode()
             return
 
 
