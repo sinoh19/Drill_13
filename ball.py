@@ -4,13 +4,14 @@ import game_world
 
 
 class Ball:
-    image = None
+    images = {}
 
     def __init__(self, x, y, velocity, size=21):
         if size not in (21, 41):
             raise ValueError('Ball size must be 21 or 41')
-        if Ball.image is None:
-            Ball.image = load_image('ball21x21.png')
+        if size not in Ball.images:
+            Ball.images[size] = load_image('ball21x21.png')
+        self.image = Ball.images[size]
         self.size = size
         self.x, self.y = x, y
         self.velocity = velocity
