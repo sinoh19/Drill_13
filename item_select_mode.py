@@ -30,10 +30,10 @@ def handle_events():
             play_mode.boy.ball_size = choices[event.key]
             game_framework.pop_mode()
             return
-
-        if event.key == SDLK_ESCAPE:
+        if event.key in (SDLK_i, SDLK_ESCAPE):
             game_framework.pop_mode()
             return
+
 
 def update():
     pass
