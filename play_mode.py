@@ -1,4 +1,4 @@
-from pico2d import *
+﻿from pico2d import *
 import game_framework
 import game_world
 import pause_mode
@@ -47,6 +47,11 @@ def handle_events():
             if getattr(event, 'repeat', 0):
                 continue
             game_framework.change_mode(title_mode)
+            return
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_i:
+            if getattr(event, 'repeat', 0):
+                continue
+            game_framework.push_mode(item_select_mode)
             return
         elif event.type == SDL_KEYDOWN and event.key == SDLK_p:
             if getattr(event, 'repeat', 0):
