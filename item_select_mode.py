@@ -19,12 +19,16 @@ def finish():
 
 
 def handle_events():
+    choices = {SDLK_0: None, SDLK_1: 21, SDLK_2: 41}
     for event in get_events():
         if event.type == SDL_QUIT:
             game_framework.quit()
             return
         if event.type != SDL_KEYDOWN or getattr(event, 'repeat', 0):
             continue
+        if event.key in choices:
+            play_mode.boy.ball_size = choices[event.key]
+            return
 
 
 def update():
